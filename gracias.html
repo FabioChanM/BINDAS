@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="movil.css">
+  <link rel="stylesheet" href="animate.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+  <script src="https://kit.fontawesome.com/2ee0245f3d.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="js/responsiveslides.min.js"></script>
+  <script src="js/wow.min.js"></script>
+</head>
+
+<body>
+  <!-- icono subir -->
+  <div class="circulosubir" id="subir">
+    <i class="fa-solid fa-chevron-up"></i>
+  </div>
+  <!-- modal -->
+  <div class="fondomodal" id="todomodal">
+    <div class="contenedormodal">
+      <div class="contenedorcerrar">
+        <h2>titulo</h2>
+        <i class="fa-solid fa-circle-xmark" id="cerrar"></i>
+      </div>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor maiores ullam eligendi eaque quam quis. Dolorem
+        minima earum vero a ipsa numquam reprehenderit repellat vel repellendus, minus ullam natus optio.</p>
+      <br>
+      <a href="#" class="btn_morado" id="cambiarcolor">ver mas</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="contenedorarriba ancho" id="home">
+      <h1 class="morado">BINDAS</h1>
+      <i id="iconomenu" class="btn_menu morado fas fa-bars"></i>
+      <nav id="contenedormenu">
+        <ul>
+          <li><a href="#home" class="btn_ancla" id="subir">HOME</a></li>
+          <li><a href="#about" class="btn_ancla">ABOUT</a></li>
+          <li><a href="#service" class="btn_ancla">SERVICE</a></li>
+          <li><a href="#portafolio" class="btn_ancla">PORTAFOLIO</a></li>
+          <li><a href="#team" class="btn_ancla">TEAM</a></li>
+          <li><a href="#pricing" class="btn_ancla">PRICING</a></li>
+          <li><a href="#blog" class="btn_ancla">BLOG</a></li>
+          <li><a href="#contact" class="btn_ancla">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <br><br>
+  <section class="ancho">
+    <br><br>
+    <h2>Gracias ...</h2>
+    <br>
+    <br>
+    <a href="index.html" class="btn_morado">Regresar</a>
+  </section>
+
+  <br><br>
+  <footer>
+    <p>Copyright © by Bindas 2022 | All Rights Reserved</p>
+  </footer>
+
+
+  <!-- funciones de javascript -->
+  <script>
+    // menu
+    $("#iconomenu").click(function () {
+      $("#contenedormenu").toggleClass("abrirmenu")
+    })
+
+    // Funcion para desplazamiento de los vinculos
+    $(".btn_ancla").click(function () {
+      var ancla = $(this).attr("href");
+      $("html,body").animate(
+        {
+          scrollTop: $(ancla).offset().top,
+        },
+        1000
+      );
+      $("#contenedormenu").toggleClass("abrirmenu");
+    });
+
+    // Funcion para el boton subir
+    $("#subir").click(function () {
+      $("html,body").animate(
+        {
+          scrollTop: "0px",
+        },
+        1000
+      );
+    });
+
+
+    // modal
+    $("#btnclick").click(function () {
+      $("#todomodal").css("display", "flex");
+    });
+
+    $("#cerrar").click(function () {
+      $("#todomodal").css("display", "none");
+    });
+
+    $("#cambiarcolor").click(function () {
+      $(".contenedormodal").css("padding", "100px");
+    })
+
+    // acordeon
+    $(".titulo_abrir").click(function () {
+      var este_elemento = $(this);
+      var activar = este_elemento.next();
+      activar.slideToggle();
+    })
+
+
+    // animaciones con Wow.js
+    new WOW().init();
+
+
+    // slide fotos
+    $(function () {
+      $(".rslides").responsiveSlides();
+    });
+
+  </script>
+</body>
+
+</html>

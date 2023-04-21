@@ -1,0 +1,142 @@
+@import url(estilo.css);
+
+@media screen and (max-width: 1024px) {
+  .welcome article {
+    max-width: 400px;
+  }
+  .contenedor_welcome {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .contenedor_portafolio figure {
+    max-width: 50%;
+  }
+  .elementosjuntos {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .elementosjuntos input {
+    width: 100%;
+  }
+  /* menu */
+  .btn_menu {
+    display: block !important;
+  }
+  .contenedorarriba {
+    position: relative;
+  }
+  nav {
+    position: absolute;
+    top: 120%;
+    left: -110%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.5s;
+  }
+  .abrirmenu {
+    left: 0;
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  nav ul li {
+    border-bottom: 1px white dotted;
+    width: 100%;
+    padding-left: 20px;
+  }
+  nav ul li a {
+    color: white;
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .filtro {
+    opacity: 1;
+  }
+  .contenedor_imagenes {
+    gap: 20px;
+  }
+  .contenedor_team figure figcaption {
+    top: 0;
+    justify-content: center;
+  }
+  .contenedor_team figure .filtro1 {
+    filter: blur(0px);
+  }
+  .contenedor_our article {
+    max-width: 300px;
+  }
+  .contenedor_parallaxs {
+    height: 500px;
+    background-position-y: 200px;
+  }
+  .contenedor_caracteristicas {
+    flex-wrap: wrap;
+  }
+  .contenedor_portafolio {
+    gap: 15px;
+  }
+  .contenedor_portafolio figure {
+    max-width: 90%;
+  }
+  .filtroportafolio {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 750px) {
+  .welcome {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .welcome article {
+    max-width: 100%;
+  }
+  .contenedor_welcome {
+    padding: 20px;
+  }
+  .contenedor_formulario {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .contenedor_formulario .elementosformulario {
+    width: 100%;
+  }
+  .contenedor_formulario .direcciones {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .contenedor_parallaxs {
+    height: 750px;
+    background-position-y: 0px;
+  }
+}
+/* IPHONE */
+@media screen and (max-width: 480px) {
+  .contenedor_team figure {
+    width: 90%;
+  }
+  .iconoredes {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .contenedor_caracteristicas {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+    height: 100%;
+  }
+}
